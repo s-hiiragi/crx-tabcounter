@@ -55,7 +55,7 @@ async function addTabCount(countDelta) {
 
 // @returns {Promise<void>}
 async function updateWindowCount() {
-    const count = await chrome.windows.getAll();
+    const windows = await chrome.windows.getAll();
     setWindowCountToTooltip(windows.length);
 }
 
